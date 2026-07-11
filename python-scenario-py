@@ -1,0 +1,334 @@
+# ==========================================================
+# SCENARIO 1: STUDENT GRADE MANAGEMENT SYSTEM
+# ==========================================================
+
+# Question:
+# A school wants a Python program to calculate a student's
+# total marks, average, and grade.
+#
+# Grade:
+# Average >= 90  -> A
+# Average >= 75  -> B
+# Average >= 50  -> C
+# Otherwise       -> Fail
+
+print("===== STUDENT GRADE MANAGEMENT =====")
+
+name = input("Enter Student Name: ")
+
+m1 = int(input("Enter Mark 1: "))
+m2 = int(input("Enter Mark 2: "))
+m3 = int(input("Enter Mark 3: "))
+
+total = m1 + m2 + m3
+average = total / 3
+
+if average >= 90:
+    grade = "A"
+elif average >= 75:
+    grade = "B"
+elif average >= 50:
+    grade = "C"
+else:
+    grade = "Fail"
+
+print("\nStudent Name :", name)
+print("Total Marks  :", total)
+print("Average      :", average)
+print("Grade        :", grade)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 2: ATM BANKING SYSTEM
+# ==========================================================
+
+# Question:
+# Create an ATM program that allows the user to
+# Deposit, Withdraw, Check Balance and Exit.
+
+print("===== ATM BANKING SYSTEM =====")
+
+balance = 10000
+
+while True:
+
+    print("\n1. Deposit")
+    print("2. Withdraw")
+    print("3. Check Balance")
+    print("4. Exit")
+
+    choice = int(input("Enter Choice: "))
+
+    if choice == 1:
+
+        amount = float(input("Enter Deposit Amount: "))
+        balance = balance + amount
+        print("Deposit Successful")
+        print("Current Balance:", balance)
+
+    elif choice == 2:
+
+        amount = float(input("Enter Withdraw Amount: "))
+
+        if amount <= balance:
+            balance = balance - amount
+            print("Withdrawal Successful")
+            print("Remaining Balance:", balance)
+        else:
+            print("Insufficient Balance")
+
+    elif choice == 3:
+
+        print("Available Balance:", balance)
+
+    elif choice == 4:
+
+        print("Thank You for Using ATM")
+        break
+
+    else:
+
+        print("Invalid Choice")
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 3: HOSPITAL APPOINTMENT SYSTEM
+# ==========================================================
+
+# Question:
+# Book a patient appointment.
+# Consultation Fee:
+# Child (<12) = ₹200
+# Adult = ₹500
+# Senior Citizen (>=60) = ₹300
+
+print("===== HOSPITAL APPOINTMENT SYSTEM =====")
+
+patient = input("Enter Patient Name: ")
+age = int(input("Enter Age: "))
+
+if age < 12:
+    fee = 200
+elif age >= 60:
+    fee = 300
+else:
+    fee = 500
+
+print("\nAppointment Confirmed")
+print("Patient Name :", patient)
+print("Consultation Fee :", fee)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 4: LIBRARY FINE CALCULATOR
+# ==========================================================
+
+# Question:
+# Calculate library fine.
+#
+# First 5 days  -> ₹2/day
+# Next 5 days   -> ₹5/day
+# Above 10 days -> ₹10/day
+
+print("===== LIBRARY FINE CALCULATOR =====")
+
+days = int(input("Enter Delayed Days: "))
+
+if days <= 5:
+    fine = days * 2
+
+elif days <= 10:
+    fine = (5 * 2) + ((days - 5) * 5)
+
+else:
+    fine = (5 * 2) + (5 * 5) + ((days - 10) * 10)
+
+print("Fine Amount =", fine)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 5: EMPLOYEE SALARY CALCULATOR
+# ==========================================================
+
+# Question:
+# Calculate Gross Salary.
+#
+# HRA = 20%
+# DA = 10%
+
+print("===== EMPLOYEE SALARY =====")
+
+employee = input("Employee Name: ")
+basic = float(input("Basic Salary: "))
+
+hra = basic * 20 / 100
+da = basic * 10 / 100
+
+gross = basic + hra + da
+
+print("\nEmployee Name :", employee)
+print("Basic Salary  :", basic)
+print("HRA           :", hra)
+print("DA            :", da)
+print("Gross Salary  :", gross)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 6: RESTAURANT BILLING SYSTEM
+# ==========================================================
+
+# Question:
+# Calculate restaurant bill including GST (5%).
+
+print("===== RESTAURANT BILL =====")
+
+food = input("Food Item: ")
+
+price = float(input("Price: "))
+
+qty = int(input("Quantity: "))
+
+total = price * qty
+
+gst = total * 5 / 100
+
+bill = total + gst
+
+print("\nFood Item :", food)
+print("Total     :", total)
+print("GST       :", gst)
+print("Final Bill:", bill)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 7: ELECTRICITY BILL SYSTEM
+# ==========================================================
+
+# Question:
+#
+# First 100 Units = ₹2/unit
+# Next 100 Units = ₹3/unit
+# Above 200 Units = ₹5/unit
+
+print("===== ELECTRICITY BILL =====")
+
+units = int(input("Enter Units: "))
+
+if units <= 100:
+
+    bill = units * 2
+
+elif units <= 200:
+
+    bill = (100 * 2) + ((units - 100) * 3)
+
+else:
+
+    bill = (100 * 2) + (100 * 3) + ((units - 200) * 5)
+
+print("Electricity Bill =", bill)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 8: ONLINE SHOPPING SYSTEM
+# ==========================================================
+
+# Question:
+#
+# Above ₹5000 -> 20% Discount
+# Above ₹3000 -> 10% Discount
+# Otherwise -> No Discount
+
+print("===== ONLINE SHOPPING =====")
+
+amount = float(input("Purchase Amount: "))
+
+if amount > 5000:
+
+    discount = amount * 20 / 100
+
+elif amount > 3000:
+
+    discount = amount * 10 / 100
+
+else:
+
+    discount = 0
+
+final = amount - discount
+
+print("Discount :", discount)
+print("Final Amount :", final)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 9: BUS TICKET BOOKING
+# ==========================================================
+
+# Question:
+#
+# Child (<12) = ₹200
+# Adult = ₹500
+# Senior Citizen (>60) = ₹300
+
+print("===== BUS TICKET BOOKING =====")
+
+name = input("Passenger Name: ")
+
+age = int(input("Enter Age: "))
+
+if age < 12:
+
+    fare = 200
+
+elif age > 60:
+
+    fare = 300
+
+else:
+
+    fare = 500
+
+print("\nPassenger :", name)
+print("Ticket Fare :", fare)
+
+print("\n")
+
+
+# ==========================================================
+# SCENARIO 10: SIMPLE LOGIN SYSTEM
+# ==========================================================
+
+# Question:
+# Username = admin
+# Password = 1234
+
+print("===== LOGIN SYSTEM =====")
+
+username = input("Enter Username: ")
+
+password = input("Enter Password: ")
+
+if username == "admin" and password == "1234":
+
+    print("Login Successful")
+
+else:
+
+    print("Invalid Username or Password")
