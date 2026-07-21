@@ -1,0 +1,205 @@
+# ==========================================================
+# SCENARIO 21: SUPERMARKET BILLING SYSTEM
+# ==========================================================
+
+# Question:
+# A supermarket gives a 15% discount if the bill exceeds ₹5000.
+# Calculate the final bill.
+
+print("===== SUPERMARKET BILLING SYSTEM =====")
+
+customer = input("Enter Customer Name: ")
+bill = float(input("Enter Total Purchase Amount: "))
+
+if bill > 5000:
+    discount = bill * 15 / 100
+else:
+    discount = 0
+
+final_bill = bill - discount
+
+print("Customer Name :", customer)
+print("Discount :", discount)
+print("Final Bill :", final_bill)
+
+
+# ==========================================================
+# SCENARIO 22: CAR PARKING FEE CALCULATOR
+# ==========================================================
+
+# Question:
+# Parking charges:
+# First 2 Hours = ₹50/hour
+# Remaining Hours = ₹30/hour
+
+print("\n===== CAR PARKING FEE =====")
+
+hours = int(input("Enter Parking Hours: "))
+
+if hours <= 2:
+    fee = hours * 50
+else:
+    fee = (2 * 50) + ((hours - 2) * 30)
+
+print("Parking Fee =", fee)
+
+
+# ==========================================================
+# SCENARIO 23: FUEL STATION BILL
+# ==========================================================
+
+# Question:
+# Petrol price = ₹105/Litre
+# Calculate the total bill.
+
+print("\n===== PETROL BILL =====")
+
+litres = float(input("Enter Litres: "))
+
+bill = litres * 105
+
+print("Petrol Bill =", bill)
+
+
+# ==========================================================
+# SCENARIO 24: BMI CALCULATOR
+# ==========================================================
+
+# Question:
+# Calculate BMI.
+#
+# BMI = Weight / Height²
+
+print("\n===== BMI CALCULATOR =====")
+
+weight = float(input("Enter Weight (kg): "))
+height = float(input("Enter Height (m): "))
+
+bmi = weight / (height * height)
+
+print("BMI =", round(bmi,2))
+
+if bmi < 18.5:
+    print("Underweight")
+elif bmi < 25:
+    print("Normal Weight")
+elif bmi < 30:
+    print("Overweight")
+else:
+    print("Obese")
+
+
+# ==========================================================
+# SCENARIO 25: TRAIN TICKET RESERVATION
+# ==========================================================
+
+# Question:
+# Ticket Price = ₹450
+# Senior citizens (60+) get 30% discount.
+
+print("\n===== TRAIN TICKET =====")
+
+age = int(input("Enter Age: "))
+
+fare = 450
+
+if age >= 60:
+    fare = fare - (fare * 30 / 100)
+
+print("Ticket Fare =", fare)
+
+
+# ==========================================================
+# SCENARIO 26: WATER BILL CALCULATOR
+# ==========================================================
+
+# Question:
+# First 1000 Litres = ₹2/Litre
+# Above 1000 Litres = ₹3/Litre
+
+print("\n===== WATER BILL =====")
+
+litres = int(input("Enter Water Consumption: "))
+
+if litres <= 1000:
+    amount = litres * 2
+else:
+    amount = (1000 * 2) + ((litres - 1000) * 3)
+
+print("Water Bill =", amount)
+
+
+# ==========================================================
+# SCENARIO 27: CINEMA SNACK BILL
+# ==========================================================
+
+# Question:
+# Popcorn = ₹150
+# Coke = ₹80
+# Nachos = ₹120
+
+print("\n===== CINEMA SNACK BILL =====")
+
+popcorn = int(input("Popcorn Quantity: "))
+coke = int(input("Coke Quantity: "))
+nachos = int(input("Nachos Quantity: "))
+
+bill = (popcorn * 150) + (coke * 80) + (nachos * 120)
+
+print("Snack Bill =", bill)
+
+
+# ==========================================================
+# SCENARIO 28: BUS PASS ELIGIBILITY
+# ==========================================================
+
+# Question:
+# Students below 25 years are eligible for a bus pass.
+
+print("\n===== BUS PASS ELIGIBILITY =====")
+
+age = int(input("Enter Age: "))
+
+if age <= 25:
+    print("Eligible for Student Bus Pass")
+else:
+    print("Not Eligible")
+
+
+# ==========================================================
+# SCENARIO 29: EXAM RESULT SYSTEM
+# ==========================================================
+
+# Question:
+# Student passes if all subjects are 35 or above.
+
+print("\n===== EXAM RESULT =====")
+
+m1 = int(input("Subject 1: "))
+m2 = int(input("Subject 2: "))
+m3 = int(input("Subject 3: "))
+
+if m1 >= 35 and m2 >= 35 and m3 >= 35:
+    print("PASS")
+else:
+    print("FAIL")
+
+
+# ==========================================================
+# SCENARIO 30: SIMPLE INVENTORY SYSTEM
+# ==========================================================
+
+# Question:
+# Check product stock.
+# If stock > 0, display Available.
+# Otherwise display Out of Stock.
+
+print("\n===== INVENTORY SYSTEM =====")
+
+product = input("Enter Product Name: ")
+stock = int(input("Enter Stock Quantity: "))
+
+if stock > 0:
+    print(product, "- Available")
+else:
+    print(product, "- Out of Stock")
